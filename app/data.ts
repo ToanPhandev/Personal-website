@@ -1,5 +1,12 @@
 
 
+type SelectedPost = {
+  title: string
+  description: string
+  link: string
+  id: string
+}
+
 type WorkExperience = {
   school: string
   title: string
@@ -21,7 +28,14 @@ type SocialLink = {
   link: string
 }
 
+/*
+export const SELECTED_POST: SelectePost[] = [
 
+  {
+
+  }
+]
+*/
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
@@ -34,7 +48,23 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ]
 
-export const BLOG_POSTS: BlogPost[] = []
+export const BLOG_POSTS: BlogPost[] = [
+
+
+  {
+    title: 'Web Trường',
+    description: 'Website chính thức Trường Đại Học Mở TP.HCM',
+    link: 'https://ou.edu.vn/',
+    uid: '1',
+  },
+
+  {
+    title: 'Web Khoa',
+    description: 'Website Khoa Công Nghệ Thông Tin Đại Học Mở TP.HCM',
+    link: 'http://it.ou.edu.vn/',
+    uid: '2',
+  }
+]
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
