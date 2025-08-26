@@ -41,6 +41,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/toan-phan-a1515935b/',
   },
+  {
+
+    label: 'GitHub',
+    link: 'https://github.com/ToanPhandev',
+  },
+
 ]
 
 export const EMAIL = 'toan.pbsg@gmail.com'
