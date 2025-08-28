@@ -9,6 +9,7 @@ import {
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
+  SELECTED_POST,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -86,6 +87,50 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      {SELECTED_POST.length > 0 && (
+        <motion.section
+          variants={VARIANTS_SECTION}
+          transition={TRANSITION_SECTION}
+        >
+          <h3 className="mb-5 text-lg font-medium">Dự án nổi bật</h3>
+          <div className="flex flex-col space-y-2">
+            {SELECTED_POST.map((post) => (
+              <a
+                className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+                href={post.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={post.id}
+              >
+                <Spotlight
+                  className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                  size={64}
+                />
+                <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+                  <div className="relative flex w-full flex-row items-center gap-4">
+                   /* {post.image && (
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="h-16 w-16 flex-shrink-0 rounded-lg object-contain"
+                      />
+                    )}
+                    */
+                    <div>
+                      <h4 className="font-normal dark:text-zinc-100">
+                        {post.title}
+                      </h4>
+                      <p className="text-zinc-500 dark:text-zinc-400">
+                        {post.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </motion.section>
+      )}
 
 
       <motion.section
@@ -107,18 +152,27 @@ export default function Personal() {
                 size={64}
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                <div className="relative flex w-full flex-row justify-between">
-                  <div>
-                    <h4 className="font-normal dark:text-zinc-100">
-                      {job.title}
-                    </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
-                      {job.school}
+                <div className="relative flex w-full flex-row items-center gap-4">
+                  {job.image && (
+                    <img
+                      src={job.image}
+                      alt={job.school}
+                      className="h-16 w-16 flex-shrink-0 rounded-lg object-contain"
+                    />
+                  )}
+                  <div className="flex flex-1 flex-row items-center justify-between">
+                    <div>
+                      <h4 className="font-normal dark:text-zinc-100">
+                        {job.title}
+                      </h4>
+                      <p className="text-zinc-500 dark:text-zinc-400">
+                        {job.school}
+                      </p>
+                    </div>
+                    <p className="flex-shrink-0 text-right text-sm text-zinc-600 dark:text-zinc-400">
+                      {job.start} - {job.end}
                     </p>
                   </div>
-                  <p className="text-zinc-600 dark:text-zinc-400">
-                    {job.start} - {job.end}
-                  </p>
                 </div>
               </div>
             </a>
@@ -144,10 +198,10 @@ export default function Personal() {
             >
               {BLOG_POSTS.map((post) => (
                 <Link
-                  key={post.uid}
+                  key={post.id}
                   className="-mx-3 rounded-xl px-3 py-3"
                   href={post.link}
-                  data-id={post.uid}
+                  data-id={post.id}
                 >
                   <div className="flex flex-col space-y-1">
                     <h4 className="font-normal dark:text-zinc-100">
