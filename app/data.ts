@@ -4,7 +4,8 @@ type SelectedPost = {
   title: string
   description: string
   link: string
-  id: string
+  id: string,
+//  image?: string
 }
 
 type WorkExperience = {
@@ -13,14 +14,16 @@ type WorkExperience = {
   start: string
   end: string
   link: string
-  id: string
+  id: string,
+  image?: string
 }
 
 type BlogPost = {
   title: string
   description: string
   link: string
-  uid: string
+  id: string,
+  image?: string
 }
 
 type SocialLink = {
@@ -30,10 +33,11 @@ type SocialLink = {
 
 export const SELECTED_POST: SelectedPost[] = [
   {
-    title: 'Web Khoa',
-    description: 'Website Khoa Công Nghệ Thông Tin Đại Học Mở TP.HCM.',
-    link: 'http://it.ou.edu.vn/',
+    title: 'Personal Website',
+    description: 'Website thông tin cá nhân',
+    link: 'personal-website-five-mu-83.vercel.app',
     id: 'selected-post-1',
+   // image: '/ou-logo.png',
   },
   // Bạn có thể thêm các dự án hoặc bài viết nổi bật khác ở đây
 ]
@@ -46,6 +50,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Hiện tại',
     link: 'https://ou.edu.vn',
     id: '2451012114',
+    image: '/ou-logo.png', // Thêm logo trường hoặc ảnh đại diện
   },
 ]
 
@@ -72,6 +77,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/toan-phan-a1515935b/',
   },
+  
   {
 
     label: 'GitHub',
