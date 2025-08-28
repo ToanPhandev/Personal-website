@@ -108,14 +108,9 @@ export default function Personal() {
                 />
                 <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
                   <div className="relative flex w-full flex-row items-center gap-4">
-                   /* {post.image && (
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="h-16 w-16 flex-shrink-0 rounded-lg object-contain"
-                      />
-                    )}
-                    */
+                   
+
+                   
                     <div>
                       <h4 className="font-normal dark:text-zinc-100">
                         {post.title}
@@ -240,3 +235,17 @@ export default function Personal() {
     </motion.main>
   )
 }
+
+
+
+
+/*
+{post.image && (
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="h-16 w-16 flex-shrink-0 rounded-lg object-contain"
+                      />
+                    )}
+
+*/
