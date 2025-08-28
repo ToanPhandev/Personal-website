@@ -28,19 +28,20 @@ type SocialLink = {
   link: string
 }
 
-/*
-export const SELECTED_POST: SelectePost[] = [
-
+export const SELECTED_POST: SelectedPost[] = [
   {
-
-  }
+    title: 'Web Khoa',
+    description: 'Website Khoa Công Nghệ Thông Tin Đại Học Mở TP.HCM.',
+    link: 'http://it.ou.edu.vn/',
+    id: 'selected-post-1',
+  },
+  // Bạn có thể thêm các dự án hoặc bài viết nổi bật khác ở đây
 ]
-*/
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     school: 'Đại Học Mở Thành Phố Hồ Chí Minh',
-    title: 'Học Ngành Khoa Học Máy Tính',
+    title: 'Sinh viên ngành Khoa học Máy tính',
     start: '2024',
     end: 'Hiện tại',
     link: 'https://ou.edu.vn',
@@ -55,14 +56,14 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Web Trường',
     description: 'Website chính thức Trường Đại Học Mở TP.HCM',
     link: 'https://ou.edu.vn/',
-    uid: '1',
+    id: 'blog-post-1',
   },
 
   {
     title: 'Web Khoa',
     description: 'Website Khoa Công Nghệ Thông Tin Đại Học Mở TP.HCM',
     link: 'http://it.ou.edu.vn/',
-    uid: '2',
+    id: 'blog-post-2',
   }
 ]
 
