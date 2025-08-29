@@ -96,11 +96,9 @@ export default function Personal() {
           <div className="flex flex-col space-y-2">
             {SELECTED_POST.map((post) => (
               <a
-                className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-                href={post.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={post.id}
+                
+
+
               >
                 <Spotlight
                   className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
@@ -237,8 +235,15 @@ export default function Personal() {
 }
 
 
+/*
+                className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+                href={post.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={post.id}
+              ></a>
 
-
+*/
 /*
 {post.image && (
                       <img
