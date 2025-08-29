@@ -3,7 +3,7 @@
 type SelectedPost = {
   title: string
   description: string
-  link: string
+//  link: string
   id: string,
 //  image?: string
 }
@@ -35,7 +35,7 @@ export const SELECTED_POST: SelectedPost[] = [
   {
     title: 'Personal Website',
     description: 'Website thông tin cá nhân',
-    link: 'personal-website-five-mu-83.vercel.app',
+    //link: 'personal-website-five-mu-83.vercel.app',
     id: 'selected-post-1',
    // image: '/ou-logo.png',
   },
